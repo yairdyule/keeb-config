@@ -35,7 +35,7 @@
 
             bindings = <
 &kp EQUAL  &kp N1    &kp N2  &kp N3          &kp N4      &kp N5       &kp N6     &kp N7    &kp N8        &trans                &trans                 &kp MINUS
-&trans     &kp EXCL  &kp AT  &kp HASH        &kp DOLLAR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans     &kp EXCL  &kp AT  &kp HASH        &kp DOLLAR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
 &kp LSHFT  &trans    &trans  &kp LEFT_ARROW  &kp RIGHT   &trans       &kp GRAVE  &kp DOWN  &kp UP_ARROW  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
                              &trans          &trans      &trans       &trans     &trans    &kp RALT
             >;
