@@ -47,7 +47,7 @@
                      , <&to BASE_LAYER>;
         };
 
-        meta_up: meta_up {
+        gui_up_macro: gui_up_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LGUI>
@@ -55,7 +55,7 @@
                      , <&macro_release &kp LGUI>;
         };
 
-        meta_down: meta_down {
+        gui_down_macro: gui_down_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LGUI>
@@ -143,7 +143,7 @@
             // These positions follow the existing Colemak-DH key bindings, not the stale layout comments.
             bindings = <
 &trans      &trans      &trans      &half_down  &trans      &half_up     &kp DOWN   &kp RIGHT  &kp PG_UP  &trans      &trans      &trans
-&trans      &trans      &trans      &trans      &trans      &meta_up    &meta_down   &trans    &trans      &trans      &trans      &trans
+&trans      &trans      &trans      &trans      &trans      &gui_up_macro &gui_down_macro &trans    &trans      &trans      &trans      &trans
 &trans      &trans      &trans      &trans      &kp PG_DN   &trans       &kp UP     &kp LEFT   &trans      &trans      &trans      &trans
                          &trans      &trans      &trans       &trans      &trans      &trans
             >;
