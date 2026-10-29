@@ -18,9 +18,6 @@
 #define HOST_SWITCH_TAP_MS 10
 #define IPHONE_HANDOFF_WAIT_MS 300
 #define LAPTOP_RECONNECT_WAIT_MS 1500
-/* ZMK keycodes for left GUI + HID keyboard Up/Down. */
-#define META_UP 0x08070052
-#define META_DOWN 0x08070051
 
 / {
     macros {
@@ -48,6 +45,22 @@
                      , <&macro_wait_time HOST_SWITCH_WAIT_MS>
                      , <&kp LC(LA(LG(T)))>
                      , <&to BASE_LAYER>;
+        };
+
+        meta_up: meta_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>
+                     , <&macro_tap &kp UP>
+                     , <&macro_release &kp LGUI>;
+        };
+
+        meta_down: meta_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>
+                     , <&macro_tap &kp DOWN>
+                     , <&macro_release &kp LGUI>;
         };
 
         half_down: half_down {
@@ -130,7 +143,7 @@
             // These positions follow the existing Colemak-DH key bindings, not the stale layout comments.
             bindings = <
 &trans      &trans      &trans      &half_down  &trans      &half_up     &kp DOWN   &kp RIGHT  &kp PG_UP  &trans      &trans      &trans
-&trans      &trans      &trans      &trans      &trans      &kp META_UP   &kp META_DOWN &trans    &trans      &trans      &trans      &trans
+&trans      &trans      &trans      &trans      &trans      &meta_up    &meta_down   &trans    &trans      &trans      &trans      &trans
 &trans      &trans      &trans      &trans      &kp PG_DN   &trans       &kp UP     &kp LEFT   &trans      &trans      &trans      &trans
                          &trans      &trans      &trans       &trans      &trans      &trans
             >;
